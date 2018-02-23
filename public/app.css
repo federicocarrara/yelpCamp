@@ -1,0 +1,33 @@
+body{
+  background: #add8e6;
+}
+
+.thumbnail img{
+  width: 100%;
+}
+
+.thumbnail{
+  padding: 0px;
+}
+
+.thumbnail .caption-full{
+  padding: 9px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.edit{
+  width: 30%;
+  margin: 20px auto;
+}
+
+.textCenter{
+  text-align: center;
+}
+
+.deleteForm{
+  display: inline;
+}

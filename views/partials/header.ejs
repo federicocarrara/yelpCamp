@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Yelp Camp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="/campgrounds" class="navbar-brand">Yelp Camp</a>
+        </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <% if (!currentUser) { %>
+              <li><a href="/register">Sign Up</a></li>
+              <li><a href="/login">Login</a></li>
+              <% } else { %>
+              <li><a>hi <%= currentUser.username %></a></li>
+              <li><a href="/logout">Logout</a></li>
+              <% } %>
+            </ul>
+          </div>
+      </div>
+    </nav>
+    <%# the error.length part is
+    necessary because even if error wouldnt exist it would be an empty array
+    that in JS is considered "true" %>
+    <% if (error && error.length > 0) { %>
+      <div class="container">
+        <div class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+    <% } %>
+    <% if (success && success.length > 0) { %>
+        <div class="alert alert-success" role="alert">
+          <%= success %>
+        </div>
+    <% } %>
+    </div>
