@@ -12,3 +12,4 @@ Hosted on Heroku
 - EJS
 - HTML
 - CSS
+- Bootstrap
